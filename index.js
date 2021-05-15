@@ -13,7 +13,7 @@ app.use('/static', express.static(path.join(__dirname, 'public')));
 app.use(session({
     secret: 'secret@1234',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
 }));
 
 
