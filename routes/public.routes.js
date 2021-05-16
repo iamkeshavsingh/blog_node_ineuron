@@ -38,9 +38,7 @@ router.post('/signin', async (req, res) => {
     if (user && user.password === password) {
         // User is Valid
         req.session.username = username;
-        return res.redirect('/', {
-            username: req.session.username
-        });
+        return res.redirect('/');
     }
 
     // TODO: Username and password are incorrect
@@ -61,9 +59,7 @@ router.post('/signup', async (req, res) => {
     }
     await UserModel.create({ ...req.body, username: username.toLowerCase() });
     req.session.username = username;
-    res.redirect('/', {
-        username: req.session.username
-    });
+    res.redirect('/');
 });
 
 
