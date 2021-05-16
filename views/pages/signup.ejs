@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs',{ title: 'Sign Up' }) %>
+  </head>
+  <body>
+    <%- include('../partials/nav.ejs',{ path: '/signup'}) %> <%-
+    include('../partials/section.ejs', { title: 'Sign Up' }) %>
+    <div class="container">
+      <div class="row" style="width: 25%; margin: 0 auto">
+        <form action="/signup" class="form" method="post">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              class="form-control"
+              type="text"
+              name="username"
+              id="username"
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input class="form-control" type="text" name="name" id="name" />
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile</label>
+            <input class="form-control" type="text" name="mobile" id="mobile" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              class="form-control"
+              type="password"
+              name="password"
+              id="password"
+            />
+          </div>
+          <div class="form-group" style="text-align: center">
+            <button type="submit" class="btn btn-primary">Make Account</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
