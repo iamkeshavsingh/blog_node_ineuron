@@ -3,30 +3,29 @@ const router = require('express').Router();
 const UserModel = require('../models/user.modal');
 
 
-
 router.get('/', (req, res) => {
     res.render('pages/home', {
-        username: req.session.username
+        username: req.session ? req.session.username : null
     });
 });
 
 
 router.get('/about', (req, res) => {
     res.render('pages/about', {
-        username: req.session.username
+        username: req.session ? req.session.username : null
     });
 });
 
 router.get('/signin', (req, res) => {
     res.render('pages/signin', {
-        username: req.session.username
+        username: req.session ? req.session.username : null
     });
 });
 
 
 router.get('/signup', (req, res) => {
     res.render('pages/signup', {
-        username: req.session.username
+        username: req.session ? req.session.username : null
     });
 });
 

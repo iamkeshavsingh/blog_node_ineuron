@@ -1,0 +1,20 @@
+<style>
+  .postItem {
+    margin-top: 30px;
+  }
+
+  .postItem__content {
+    padding: 30px;
+  }
+</style>
+
+<div class="col-md-4 postItem">
+  <div class="card">
+    <div class="card-body postItem__content">
+      <h4 class="card-title"><%= post.title %></h4>
+      <h6 class="card-text"><%= post.description %></h6>
+      <a href="#" class="btn btn-primary">Edit</a>
+      <a href="#" class="btn btn-danger">Delete</a>
+    </div>
+  </div>
+</div>

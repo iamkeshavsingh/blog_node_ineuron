@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs', { title: 'Create Post'}) %>
+    <style>
+      .create-post {
+        margin-top: 30px;
+        justify-content: center;
+      }
+
+      .create-post-card {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('../partials/nav.ejs',{ path: '/posts', username: username}) %>
+    <div class="container">
+      <div class="row create-post">
+        <div class="col-md-5">
+          <div class="card create-post-card">
+            <h3 class="card-title">Create Post</h3>
+            <div class="card-text create-post-content">
+              <form
+                action="/posts/create"
+                method="post"
+                enctype="multipart/form-data"
+              >
+                <div class="form-group">
+                  <label for="title">Post Title</label>
+                  <input name="title" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="description">Post Description</label>
+                  <input type="text" name="description" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="image">Image</label>
+                  <input type="file" name="image" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
