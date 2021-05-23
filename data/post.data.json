@@ -1,9 +1,1 @@
-{
-  "cb83773c-df9e-4f37-8dd5-7ca5bca9c92e": {
-    "title": "My First Post",
-    "description": "Hey this is my first post",
-    "author": "keshav",
-    "imageUrl": "http://localhost:3000/uploads/image-1621665233431.JPG",
-    "createdAt": "2021-05-22T06:33:53.435Z"
-  }
-}
+{"cb83773c-df9e-4f37-8dd5-7ca5bca9c92e":{"title":"My First Edit Post ","description":"This is my first edited post","author":"keshav","imageUrl":"http://localhost:3000/uploads/image-1621665233431.JPG","createdAt":"2021-05-22T06:33:53.435Z"},"a77fe0be-5ef3-473a-a337-080825d78ff3":{"title":"This is John's Post","description":"Hey my name is John","author":"john","imageUrl":"http://localhost:3000/uploads/image-1621749429538.jpeg","createdAt":"2021-05-23T05:57:09.542Z"}}

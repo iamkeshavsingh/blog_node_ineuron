@@ -2,6 +2,16 @@
 <html lang="en">
   <head>
     <%- include('../partials/head.ejs',{ title: 'Sign Up' }) %>
+    <style>
+      .error {
+        color: #8e8e8e;
+        padding: 10px;
+      }
+
+      .error > h5 {
+        font-size: 12px;
+      }
+    </style>
   </head>
   <body>
     <%- include('../partials/nav.ejs',{ path: '/signup'}) %> <%-
@@ -10,21 +20,39 @@
       <div class="row" style="width: 25%; margin: 0 auto">
         <form action="/signup" class="form" method="post">
           <div class="form-group">
+            <% if (error) { %>
+            <div class="error">
+              <h5><%= error %></h5>
+            </div>
+            <% } %>
             <label for="username">Username</label>
             <input
               class="form-control"
               type="text"
               name="username"
               id="username"
+              value="<%= username %>"
             />
           </div>
           <div class="form-group">
             <label for="name">Full Name</label>
-            <input class="form-control" type="text" name="name" id="name" />
+            <input
+              value="<%= name %>"
+              class="form-control"
+              type="text"
+              name="name"
+              id="name"
+            />
           </div>
           <div class="form-group">
             <label for="mobile">Mobile</label>
-            <input class="form-control" type="text" name="mobile" id="mobile" />
+            <input
+              value="<%= mobile %>"
+              class="form-control"
+              type="text"
+              name="mobile"
+              id="mobile"
+            />
           </div>
           <div class="form-group">
             <label for="password">Password</label>
@@ -33,6 +61,7 @@
               type="password"
               name="password"
               id="password"
+              value="<%= password %>"
             />
           </div>
           <div class="form-group" style="text-align: center">

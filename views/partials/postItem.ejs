@@ -12,9 +12,14 @@
   <div class="card">
     <div class="card-body postItem__content">
       <h4 class="card-title"><%= post.title %></h4>
-      <h6 class="card-text"><%= post.description %></h6>
-      <a href="#" class="btn btn-primary">Edit</a>
-      <a href="#" class="btn btn-danger">Delete</a>
+      <img width="300" src="<%= post.imageUrl %> " alt="" />
+      <h6 style="padding: 20px 0px" class="card-text">
+        <%= post.description %>
+      </h6>
+      <% if (username.toLowerCase() === post.author) { %>
+      <a href="/posts/edit/<%= post.id %> " class="btn btn-primary">Edit</a>
+      <a href="/posts/delete/<%= post.id %> " class="btn btn-danger">Delete</a>
+      <% } %>
     </div>
   </div>
 </div>

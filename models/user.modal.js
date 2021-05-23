@@ -7,7 +7,7 @@ var findAll = function () {
     return readFile(PATH);
 }
 
-
+// This function will return me the user based on username
 var findByUsername = async function (username) {
 
     var users = await readFile(PATH);
@@ -16,7 +16,7 @@ var findByUsername = async function (username) {
     }
 }
 
-
+// This function will check if the username is already registered
 var checkUsername = async function (username) {
     var users = await readFile(PATH);
     if (users[username.toLowerCase()]) {
@@ -25,7 +25,7 @@ var checkUsername = async function (username) {
     return false;
 }
 
-
+// This function will create a new User
 var create = async function (user) {
     var users = await readFile(PATH);
     users[user.username] = user;
