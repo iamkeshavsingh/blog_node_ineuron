@@ -4,6 +4,7 @@ function authMiddleware(req, res, next) {
         return res.redirect('/signin');
     }
 
+    res.locals.username = req.session.username;
     next();
 }
 
